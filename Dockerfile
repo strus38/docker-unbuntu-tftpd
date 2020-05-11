@@ -3,9 +3,9 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get -y  dist-upgrade
 RUN apt-get install supervisor tftpd-hpa net-tools -y
 
-RUN mkdir -p /tftp && chown tftp:tftp /tftp
+#RUN mkdir -p /tftpboot && chown tftp:tftp /tftpboot && chmod 777 /tftpboot
 
-VOLUME /tftp
+VOLUME /srv/tftp
 EXPOSE 69/udp
 
 ADD scripts/start.sh /root/start.sh

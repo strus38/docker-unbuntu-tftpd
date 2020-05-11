@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/supervisord --nodaemon
+in.tftpd --version && /usr/bin/supervisord --nodaemon
